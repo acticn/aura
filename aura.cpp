@@ -3,9 +3,12 @@
 #include <glad/glad.h> 
 #include <GLFW/glfw3.h>
 #include <iostream>
+#include <shader.h>
+
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 
 void processInput(GLFWwindow* window);
+
 int main()
 {
     glfwInit();//初始化glfw
@@ -58,10 +61,13 @@ int main()
     {
         processInput(window);
 
+        glClearColor(.2f, .2f, .2f, .2f);
+        glClear(GL_COLOR_BUFFER_BIT);
         glfwSwapBuffers(window);//交换前后缓冲区（这种机制可以避免画面撕裂等现象
         glfwPollEvents();//检查有没有触发什么事件（比如键盘输入、鼠标移动等）、更新窗口状态，并调用回调函数（可以通过回调方法手动设置）。
     }
     glfwTerminate();//中止，释放资源
+
     return 0;
 }
 
