@@ -13,18 +13,32 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="源文件\src">
+      <UniqueIdentifier>{fdd3d0d2-1d58-4ed4-824d-7d745078088c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\src\shaders">
+      <UniqueIdentifier>{6bbd9392-6ead-40bf-8b05-f7d8f431ce60}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="aura.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="src\glad.c">
-      <Filter>源文件</Filter>
+      <Filter>源文件\src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\shader.h">
       <Filter>头文件</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\shaders\3.3.shader.fs">
+      <Filter>源文件\src\shaders</Filter>
+    </None>
+    <None Include="src\shaders\3.3.shader.vs">
+      <Filter>源文件\src\shaders</Filter>
+    </None>
   </ItemGroup>
 </Project>
