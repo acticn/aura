@@ -19,6 +19,9 @@
     <Filter Include="源文件\src\shaders">
       <UniqueIdentifier>{6bbd9392-6ead-40bf-8b05-f7d8f431ce60}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\GLFW">
+      <UniqueIdentifier>{81b73c5f-ffff-4067-b3b1-46481120c2b0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="aura.cpp">
@@ -30,6 +33,21 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\shader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\stb_image.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GLFW\glfw3.h">
+      <Filter>头文件\GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GLFW\glfw3native.h">
+      <Filter>头文件\GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="include\camera.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\filesystem.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
