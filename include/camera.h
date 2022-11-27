@@ -28,11 +28,11 @@ class Camera
 {
 public:
     // camera Attributes
-    glm::vec3 Position;
-    glm::vec3 Front;
-    glm::vec3 Up;
-    glm::vec3 Right;
-    glm::vec3 WorldUp;
+    glm::vec3 Position;//相机位置
+    glm::vec3 Front;//朝向方向
+    glm::vec3 Up;//向上方向
+    glm::vec3 Right;//向右方向
+    glm::vec3 WorldUp;//y轴方向
     // euler Angles
     float Yaw;
     float Pitch;
@@ -61,6 +61,12 @@ public:
     }
 
     // returns the view matrix calculated using Euler Angles and the LookAt Matrix
+    /*
+    * lookAt(vec3 eye, vec3 center, vec3 up)
+    * eye:相机位置
+    * center:相机视线上的任意一点
+    * up:归一化的向上方向向量
+    */
     glm::mat4 GetViewMatrix()
     {
         return glm::lookAt(Position, Position + Front, Up);
@@ -81,6 +87,7 @@ public:
     }
 
     // processes input received from a mouse input system. Expects the offset value in both the x and y direction.
+    // 根据鼠标水平和竖直方向上的移动修改Yaw(偏航角)和Pitch(俯仰角),最终执行修改相机的朝向方向和向上方向等.
     void ProcessMouseMovement(float xoffset, float yoffset, GLboolean constrainPitch = true)
     {
         xoffset *= MouseSensitivity;
@@ -114,6 +121,7 @@ public:
 
 private:
     // calculates the front vector from the Camera's (updated) Euler Angles
+    // 更新朝向方向,向右方向,和向上方向
     void updateCameraVectors()
     {
         // calculate the new Front vector

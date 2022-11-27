@@ -1,30 +1,33 @@
 ﻿// aura.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
-//
-#include <glad/glad.h> 
+
+//OpenGL导入
+#include <glad/glad.h>
 #include <GLFW/glfw3.h>
+//image加载库
 #define STB_IMAGE_IMPLEMENTATION
 #include <stb_image.h>
-
+//矩阵库
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
-
+//相机类，shader类，文件导入库
 #include <camera.h>
-
-#include <iostream>
 #include <shader.h>
 #include <filesystem.h>
-void framebuffer_size_callback(GLFWwindow* window, int width, int height);
-void mouse_callback(GLFWwindow* window, double xpos, double ypos);
-void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
-void processInput(GLFWwindow* window);
+//C++基本库
+#include <iostream>
+
+void framebuffer_size_callback(GLFWwindow* window, int width, int height);//画面大小调整回调函数
+void mouse_callback(GLFWwindow* window, double xpos, double ypos);//鼠标回调函数
+void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);//滚动回调函数
+void processInput(GLFWwindow* window);//键盘输入响应
 
 
-// settings
+// settings 屏幕大小
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
 
-// camera
+// camera 相机初始化
 Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));
 float lastX = SCR_WIDTH / 2.0f;
 float lastY = SCR_HEIGHT / 2.0f;
