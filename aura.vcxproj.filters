@@ -22,6 +22,9 @@
     <Filter Include="头文件\GLFW">
       <UniqueIdentifier>{81b73c5f-ffff-4067-b3b1-46481120c2b0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\model">
+      <UniqueIdentifier>{6a4a4e1b-e74b-49c4-8393-b46bacbe1b50}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="aura.cpp">
@@ -48,6 +51,15 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="include\filesystem.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\model\mesh.h">
+      <Filter>头文件\model</Filter>
+    </ClInclude>
+    <ClInclude Include="include\model\model.h">
+      <Filter>头文件\model</Filter>
+    </ClInclude>
+    <ClInclude Include="include\shader_m.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
