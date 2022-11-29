@@ -74,18 +74,18 @@ public:
             else if (name == "texture_height")
                 number = std::to_string(heightNr++); // transfer unsigned int to string
 
-            // now set the sampler to the correct texture unit
+            // 设置sampler指向对应texture uint
             glUniform1i(glGetUniformLocation(shader.ID, (name + number).c_str()), i);
-            // and finally bind the texture
+            // 绑定纹理
             glBindTexture(GL_TEXTURE_2D, textures[i].id);
         }
 
-        // draw mesh
+        // 绑定VAO并执行绘图
         glBindVertexArray(VAO);
         glDrawElements(GL_TRIANGLES, static_cast<unsigned int>(indices.size()), GL_UNSIGNED_INT, 0);
         glBindVertexArray(0);
 
-        // always good practice to set everything back to defaults once configured.
+        // 恢复texture默认绑定
         glActiveTexture(GL_TEXTURE0);
     }
 
