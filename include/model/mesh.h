@@ -14,38 +14,32 @@ using namespace std;
 
 #define MAX_BONE_INFLUENCE 4
 
+//顶点结构体
 struct Vertex {
-    // position
-    glm::vec3 Position;
-    // normal
-    glm::vec3 Normal;
-    // texCoords
-    glm::vec2 TexCoords;
-    // tangent
-    glm::vec3 Tangent;
-    // bitangent
-    glm::vec3 Bitangent;
-    //bone indexes which will influence this vertex
-    int m_BoneIDs[MAX_BONE_INFLUENCE];
-    //weights from each bone
-    float m_Weights[MAX_BONE_INFLUENCE];
+    glm::vec3 Position;//位置
+    glm::vec3 Normal;//法线
+    glm::vec2 TexCoords;//纹理坐标
+    glm::vec3 Tangent;//切线
+    glm::vec3 Bitangent;//双切线
+    int m_BoneIDs[MAX_BONE_INFLUENCE];    //bone indexes which will influence this vertex
+    float m_Weights[MAX_BONE_INFLUENCE];    //weights from each bone
 };
-
+//纹理结构体
 struct Texture {
-    unsigned int id;
-    string type;
-    string path;
+    unsigned int id;//纹理id
+    string type;//纹理类型 如:diffuse
+    string path;//文件路径
 };
 
 class Mesh {
 public:
-    // mesh Data
+    // mesh Data 包括哪些点,哪些三角形,哪些纹理
     vector<Vertex>       vertices;
     vector<unsigned int> indices;
     vector<Texture>      textures;
     unsigned int VAO;
 
-    // constructor
+    // constructor 构造函数
     Mesh(vector<Vertex> vertices, vector<unsigned int> indices, vector<Texture> textures)
     {
         this->vertices = vertices;
@@ -53,6 +47,7 @@ public:
         this->textures = textures;
 
         // now that we have all the required data, set the vertex buffers and its attribute pointers.
+        // 所有数据已经就位,现在可以设置VBO,VAO,EBO了.
         setupMesh();
     }
 
@@ -101,36 +96,41 @@ private:
     // initializes all the buffer objects/arrays
     void setupMesh()
     {
-        // create buffers/arrays
+        // 创建VBO,VAO,EBO
         glGenVertexArrays(1, &VAO);
         glGenBuffers(1, &VBO);
         glGenBuffers(1, &EBO);
 
         glBindVertexArray(VAO);
         // load data into vertex buffers
-        glBindBuffer(GL_ARRAY_BUFFER, VBO);
+        
         // A great thing about structs is that their memory layout is sequential for all its items.
         // The effect is that we can simply pass a pointer to the struct and it translates perfectly to a glm::vec3/2 array which
         // again translates to 3/2 floats which translates to a byte array.
+        
+
+        //配置VBO数据
+        glBindBuffer(GL_ARRAY_BUFFER, VBO);
         glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(Vertex), &vertices[0], GL_STATIC_DRAW);
 
+        //配置EBO数据
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
         glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(unsigned int), &indices[0], GL_STATIC_DRAW);
 
-        // set the vertex attribute pointers
-        // vertex Positions
+        // 设置顶点属性
+        // 位置坐标
         glEnableVertexAttribArray(0);
         glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)0);
-        // vertex normals
+        // 法线
         glEnableVertexAttribArray(1);
         glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, Normal));
-        // vertex texture coords
+        // 纹理坐标
         glEnableVertexAttribArray(2);
         glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, TexCoords));
-        // vertex tangent
+        // 切线
         glEnableVertexAttribArray(3);
         glVertexAttribPointer(3, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, Tangent));
-        // vertex bitangent
+        // 双切线
         glEnableVertexAttribArray(4);
         glVertexAttribPointer(4, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, Bitangent));
         // ids

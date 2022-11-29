@@ -30,7 +30,7 @@ class Model
 public:
     // model data 
     vector<Texture> textures_loaded;	// stores all the textures loaded so far, optimization to make sure textures aren't loaded more than once.
-    vector<Mesh>    meshes;
+    vector<Mesh>    meshes;//一个模型由多个mesh组成
     string directory;
     bool gammaCorrection;
 
@@ -48,7 +48,7 @@ public:
     }
 
 private:
-    // loads a model with supported ASSIMP extensions from file and stores the resulting meshes in the meshes vector.
+    // 使用assimp库从文件中加载模型,用一个mesh vector存储数据
     void loadModel(string const& path)
     {
         // read file via ASSIMP
@@ -62,7 +62,7 @@ private:
         }
         // retrieve the directory path of the filepath
         directory = path.substr(0, path.find_last_of('/'));
-
+        cout << path << endl;
         // process ASSIMP's root node recursively
         processNode(scene->mRootNode, scene);
     }
@@ -98,12 +98,13 @@ private:
         {
             Vertex vertex;
             glm::vec3 vector; // we declare a placeholder vector since assimp uses its own vector class that doesn't directly convert to glm's vec3 class so we transfer the data to this placeholder glm::vec3 first.
-            // positions
+
+            // 坐标
             vector.x = mesh->mVertices[i].x;
             vector.y = mesh->mVertices[i].y;
             vector.z = mesh->mVertices[i].z;
             vertex.Position = vector;
-            // normals
+            // 向量
             if (mesh->HasNormals())
             {
                 vector.x = mesh->mNormals[i].x;
@@ -111,7 +112,7 @@ private:
                 vector.z = mesh->mNormals[i].z;
                 vertex.Normal = vector;
             }
-            // texture coordinates
+            // 纹理坐标
             if (mesh->mTextureCoords[0]) // does the mesh contain texture coordinates?
             {
                 glm::vec2 vec;
@@ -136,7 +137,9 @@ private:
 
             vertices.push_back(vertex);
         }
-        // now wak through each of the mesh's faces (a face is a mesh its triangle) and retrieve the corresponding vertex indices.
+
+
+        // 一个mesh可能有多个面,对于每个面,我们需要获取全部的indice
         for (unsigned int i = 0; i < mesh->mNumFaces; i++)
         {
             aiFace face = mesh->mFaces[i];
@@ -144,6 +147,7 @@ private:
             for (unsigned int j = 0; j < face.mNumIndices; j++)
                 indices.push_back(face.mIndices[j]);
         }
+
         // process materials
         aiMaterial* material = scene->mMaterials[mesh->mMaterialIndex];
         // we assume a convention for sampler names in the shaders. Each diffuse texture should be named

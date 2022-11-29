@@ -25,6 +25,9 @@
     <Filter Include="头文件\model">
       <UniqueIdentifier>{6a4a4e1b-e74b-49c4-8393-b46bacbe1b50}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\LOshaders">
+      <UniqueIdentifier>{e0b5a61e-eb34-4012-a4cb-f2e79d066d97}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="aura.cpp">
@@ -69,6 +72,879 @@
     </None>
     <None Include="src\shaders\3.3.shader.vs">
       <Filter>源文件\src\shaders</Filter>
+    </None>
+    <None Include="LOshaders\1.1.depth_testing.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\1.1.depth_testing.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\1.1.pbr.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\1.1.pbr.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\1.2.depth_testing.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\1.2.depth_testing.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\1.2.pbr.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\1.2.pbr.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\1.advanced_lighting.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\1.advanced_lighting.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\1.colors.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\1.colors.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\1.light_cube.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\1.light_cube.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\1.model_loading.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\1.model_loading.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.1.1.background.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.1.1.background.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.1.1.cubemap.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.1.1.equirectangular_to_cubemap.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.1.1.pbr.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.1.1.pbr.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.1.2.background.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.1.2.background.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.1.2.cubemap.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.1.2.equirectangular_to_cubemap.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.1.2.irradiance_convolution.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.1.2.pbr.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.1.2.pbr.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.1.basic_lighting.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.1.basic_lighting.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.1.light_cube.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.1.light_cube.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.2.1.background.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.2.1.background.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.2.1.brdf.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.2.1.brdf.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.2.1.cubemap.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.2.1.equirectangular_to_cubemap.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.2.1.irradiance_convolution.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.2.1.pbr.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.2.1.pbr.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.2.1.prefilter.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.2.2.background.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.2.2.background.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.2.2.brdf.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.2.2.brdf.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.2.2.cubemap.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.2.2.equirectangular_to_cubemap.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.2.2.irradiance_convolution.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.2.2.pbr.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.2.2.pbr.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.2.2.prefilter.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.2.basic_lighting.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.2.basic_lighting.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.2.light_cube.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.2.light_cube.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.gamma_correction.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.gamma_correction.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.stencil_single_color.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.stencil_testing.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\2.stencil_testing.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.1.1.debug_quad.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.1.1.debug_quad_depth.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.1.1.shadow_mapping_depth.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.1.1.shadow_mapping_depth.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.1.2.debug_quad.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.1.2.debug_quad_depth.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.1.2.shadow_mapping.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.1.2.shadow_mapping.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.1.2.shadow_mapping_depth.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.1.2.shadow_mapping_depth.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.1.3.debug_quad.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.1.3.debug_quad_depth.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.1.3.shadow_mapping.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.1.3.shadow_mapping.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.1.3.shadow_mapping_depth.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.1.3.shadow_mapping_depth.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.1.blending.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.1.blending.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.1.light_cube.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.1.light_cube.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.1.materials.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.1.materials.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.2.1.point_shadows.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.2.1.point_shadows.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.2.1.point_shadows_depth.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.2.1.point_shadows_depth.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.2.2.point_shadows.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.2.2.point_shadows.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.2.2.point_shadows_depth.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.2.2.point_shadows_depth.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.2.blending.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.2.blending.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.2.light_cube.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.2.light_cube.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.2.materials.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.2.materials.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.3.shader.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.3.shader.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\4.1.light_cube.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\4.1.light_cube.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\4.1.lighting_maps.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\4.1.lighting_maps.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\4.1.texture.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\4.1.texture.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\4.2.light_cube.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\4.2.light_cube.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\4.2.lighting_maps.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\4.2.lighting_maps.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\4.2.texture.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\4.2.texture.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\4.3.texture.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\4.3.texture.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\4.4.light_cube.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\4.4.light_cube.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\4.4.lighting_maps.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\4.4.lighting_maps.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\4.4.texture.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\4.4.texture.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\4.5.texture.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\4.5.texture.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\4.normal_mapping.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\4.normal_mapping.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\5.1.framebuffers.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\5.1.framebuffers.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\5.1.framebuffers_screen.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\5.1.framebuffers_screen.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\5.1.light_casters.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\5.1.light_casters.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\5.1.light_cube.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\5.1.light_cube.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\5.1.parallax_mapping.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\5.1.parallax_mapping.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\5.1.transform.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\5.1.transform.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\5.2.framebuffers.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\5.2.framebuffers.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\5.2.framebuffers_screen.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\5.2.framebuffers_screen.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\5.2.light_casters.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\5.2.light_casters.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\5.2.light_cube.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\5.2.light_cube.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\5.2.parallax_mapping.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\5.2.parallax_mapping.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\5.2.transform.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\5.2.transform.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\5.3.light_casters.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\5.3.light_casters.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\5.3.light_cube.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\5.3.light_cube.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\5.3.parallax_mapping.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\5.3.parallax_mapping.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\5.4.light_casters.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\5.4.light_casters.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\5.4.light_cube.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\5.4.light_cube.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\6.1.coordinate_systems.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\6.1.coordinate_systems.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\6.1.cubemaps.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\6.1.cubemaps.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\6.1.skybox.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\6.1.skybox.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\6.2.coordinate_systems.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\6.2.coordinate_systems.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\6.2.cubemaps.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\6.2.cubemaps.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\6.2.skybox.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\6.2.skybox.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\6.3.coordinate_systems.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\6.3.coordinate_systems.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\6.bloom.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\6.bloom.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\6.bloom_final.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\6.bloom_final.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\6.hdr.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\6.hdr.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\6.light_box.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\6.light_cube.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\6.light_cube.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\6.lighting.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\6.lighting.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\6.multiple_lights.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\6.multiple_lights.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\6.new_downsample.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\6.new_downsample.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\6.new_upsample.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\6.new_upsample.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\6.old_blur.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\6.old_blur.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\7.1.camera.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\7.1.camera.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\7.2.camera.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\7.2.camera.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\7.3.camera.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\7.3.camera.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\7.4.camera.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\7.4.camera.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\7.bloom.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\7.bloom.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\7.bloom_final.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\7.bloom_final.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\7.blur.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\7.blur.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\7.light_box.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\8.1.deferred_light_box.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\8.1.deferred_light_box.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\8.1.deferred_shading.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\8.1.deferred_shading.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\8.1.fbo_debug.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\8.1.fbo_debug.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\8.1.g_buffer.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\8.1.g_buffer.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\8.2.deferred_light_box.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\8.2.deferred_light_box.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\8.2.deferred_shading.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\8.2.deferred_shading.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\8.2.g_buffer.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\8.2.g_buffer.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\8.3.cpuheight.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\8.3.cpuheight.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\8.3.gpuheight.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\8.3.gpuheight.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\8.advanced_glsl.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\8.blue.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\8.green.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\8.red.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\8.yellow.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\9.1.geometry_shader.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\9.1.geometry_shader.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\9.2.geometry_shader.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\9.2.geometry_shader.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\9.3.default.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\9.3.default.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\9.3.normal_visualization.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\9.3.normal_visualization.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\9.ssao.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\9.ssao.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\9.ssao_blur.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\9.ssao_geometry.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\9.ssao_geometry.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\9.ssao_lighting.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\10.1.instancing.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\10.1.instancing.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\10.2.instancing.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\10.2.instancing.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\10.3.asteroids.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\10.3.asteroids.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\10.3.planet.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\10.3.planet.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\10.debug_cascade.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\10.debug_cascade.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\10.debug_quad.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\10.debug_quad_depth.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\10.shadow_mapping.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\10.shadow_mapping.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\10.shadow_mapping_depth.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\10.shadow_mapping_depth.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\11.1.anti_aliasing.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\11.1.anti_aliasing.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\11.2.aa_post.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\11.2.aa_post.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\11.2.anti_aliasing.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\11.2.anti_aliasing.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\anim_model.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\anim_model.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\composite.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\composite.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\csm.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\csm.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\debugging.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\debugging.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\particle.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\particle.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\post_processing.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\post_processing.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\screen.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\screen.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\screenQuad.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\screenQuad.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\solid.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\solid.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\sprite.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\sprite.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\text.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\text.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\text_2d.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\text_2d.vs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\transparent.fs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\transparent.vs">
+      <Filter>源文件\LOshaders</Filter>
     </None>
   </ItemGroup>
 </Project>

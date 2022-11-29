@@ -71,3 +71,8 @@ direction.y = sin(glm::radians(pitch));
 direction.x = cos(glm::radians(pitch));  
 direction.z = cos(glm::radians(pitch));  
 
+# mesh.h
+属性: vertex数组,indices数组,texture数组  
+构造函数: 初始化  
+setupMesh: 设置VAO,VBO,EBO等缓存  
+Draw: 纹理绑定, VAO绑定, 绘图.
