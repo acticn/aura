@@ -946,5 +946,23 @@
     <None Include="LOshaders\transparent.vs">
       <Filter>源文件\LOshaders</Filter>
     </None>
+    <None Include="LOshaders\3.2.1.point_shadows_depth.gs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\3.2.2.point_shadows_depth.gs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\9.1.geometry_shader.gs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\9.2.geometry_shader.gs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\9.3.normal_visualization.gs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
+    <None Include="LOshaders\10.shadow_mapping_depth.gs">
+      <Filter>源文件\LOshaders</Filter>
+    </None>
   </ItemGroup>
 </Project>

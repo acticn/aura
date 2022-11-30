@@ -9,6 +9,7 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
+
 //相机类，shader类，文件导入库
 #include <camera.h>
 #include <shader.h>
@@ -22,7 +23,8 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height);//画�
 void mouse_callback(GLFWwindow* window, double xpos, double ypos);//鼠标回调函数
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);//滚动回调函数
 void processInput(GLFWwindow* window);//键盘输入响应
-
+unsigned int loadTexture(const char* path);
+unsigned int loadCubemap(vector<std::string> faces);
 
 // settings 屏幕大小
 const unsigned int SCR_WIDTH = 800;
@@ -81,58 +83,48 @@ int main()
         std::cout << "Failed to initialize GLAD" << std::endl;
         return -1;
     }
-
+    // configure global opengl state
     // configure global opengl state
     // -----------------------------
-    // tell stb_image.h to flip loaded texture's on the y-axis (before loading model).
-    stbi_set_flip_vertically_on_load(true);
-
     glEnable(GL_DEPTH_TEST);
 
+    // build and compile shaders
+    // -------------------------
+    Shader shader("./LOshaders/9.1.geometry_shader.vs", "./LOshaders/9.1.geometry_shader.fs", "./LOshaders/9.1.geometry_shader.gs");
 
-    Shader ourShader("./LOshaders/1.model_loading.vs", "./LOshaders/1.model_loading.fs");//创建Shader
+    // set up vertex data (and buffer(s)) and configure vertex attributes
+    // ------------------------------------------------------------------
+    float points[] = {
+        -0.5f,  0.5f, 1.0f, 0.0f, 0.0f, // top-left
+         0.5f,  0.5f, 0.0f, 1.0f, 0.0f, // top-right
+         0.5f, -0.5f, 0.0f, 0.0f, 1.0f, // bottom-right
+        -0.5f, -0.5f, 1.0f, 1.0f, 0.0f  // bottom-left
+    };
+    unsigned int VBO, VAO;
+    glGenBuffers(1, &VBO);
+    glGenVertexArrays(1, &VAO);
+    glBindVertexArray(VAO);
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(points), &points, GL_STATIC_DRAW);
+    glEnableVertexAttribArray(0);
+    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), 0);
+    glEnableVertexAttribArray(1);
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(2 * sizeof(float)));
+    glBindVertexArray(0);
 
-    // load models 加载模型
+    // render loop
     // -----------
-    Model ourModel(FileSystem::getPath("resources/objects/backpack/backpack.obj"));
-
-
-    //render loop
     while (!glfwWindowShouldClose(window))
     {
-        // per-frame time logic
-        // --------------------
-        float currentFrame = static_cast<float>(glfwGetTime());
-        deltaTime = currentFrame - lastFrame;
-        lastFrame = currentFrame;
-
-        // input
-        // -----
-        processInput(window);
-
         // render
         // ------
-        glClearColor(0.05f, 0.05f, 0.05f, 1.0f);
+        glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-
-        // don't forget to enable shader before setting uniforms
-        ourShader.use();
-
-
-        // view/projection transformations
-        glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
-        glm::mat4 view = camera.GetViewMatrix();
-        ourShader.setMat4("projection", projection);
-        ourShader.setMat4("view", view);
-
-        // render the loaded model
-        glm::mat4 model = glm::mat4(1.0f);
-        model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f)); // translate it down so it's at the center of the scene
-        model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f));	// it's a bit too big for our scene, so scale it down
-        ourShader.setMat4("model", model);
-        ourModel.Draw(ourShader);
-
+        // draw points
+        shader.use();
+        glBindVertexArray(VAO);
+        glDrawArrays(GL_POINTS, 0, 4);
 
         // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
         // -------------------------------------------------------------------------------
@@ -140,9 +132,12 @@ int main()
         glfwPollEvents();
     }
 
-    //释放资源
-    glfwTerminate();//中止，释放资源
+    // optional: de-allocate all resources once they've outlived their purpose:
+    // ------------------------------------------------------------------------
+    glDeleteVertexArrays(1, &VAO);
+    glDeleteBuffers(1, &VBO);
 
+    glfwTerminate();
     return 0;
 }
 
@@ -193,4 +188,71 @@ void mouse_callback(GLFWwindow* window, double xposIn, double yposIn)
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
 {
     camera.ProcessMouseScroll(static_cast<float>(yoffset));
+}
+
+unsigned int loadTexture(char const* path)
+{
+    unsigned int textureID;
+    glGenTextures(1, &textureID);
+
+    int width, height, nrComponents;
+    unsigned char* data = stbi_load(path, &width, &height, &nrComponents, 0);
+    if (data)
+    {
+        GLenum format;
+        if (nrComponents == 1)
+            format = GL_RED;
+        else if (nrComponents == 3)
+            format = GL_RGB;
+        else if (nrComponents == 4)
+            format = GL_RGBA;
+
+        glBindTexture(GL_TEXTURE_2D, textureID);
+        glTexImage2D(GL_TEXTURE_2D, 0, format, width, height, 0, format, GL_UNSIGNED_BYTE, data);
+        glGenerateMipmap(GL_TEXTURE_2D);
+
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+        stbi_image_free(data);
+    }
+    else
+    {
+        std::cout << "Texture failed to load at path: " << path << std::endl;
+        stbi_image_free(data);
+    }
+
+    return textureID;
+}
+
+unsigned int loadCubemap(vector<std::string> faces)
+{
+    unsigned int textureID;
+    glGenTextures(1, &textureID);
+    glBindTexture(GL_TEXTURE_CUBE_MAP, textureID);
+
+    int width, height, nrComponents;
+    for (unsigned int i = 0; i < faces.size(); i++)
+    {
+        unsigned char* data = stbi_load(faces[i].c_str(), &width, &height, &nrComponents, 0);
+        if (data)
+        {
+            glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X + i, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+            stbi_image_free(data);
+        }
+        else
+        {
+            std::cout << "Cubemap texture failed to load at path: " << faces[i] << std::endl;
+            stbi_image_free(data);
+        }
+    }
+    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
+
+    return textureID;
 }

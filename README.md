@@ -76,3 +76,40 @@ direction.z = cos(glm::radians(pitch));
 构造函数: 初始化  
 setupMesh: 设置VAO,VBO,EBO等缓存  
 Draw: 纹理绑定, VAO绑定, 绘图.
+
+![](./DocumenHelp/images/assimp_structure.png)
+递归访问全部node, 对于每个node中的mesh进行处理, 构造mesh对象.  
+构造mesh对象的过程包括: vertex属性的存储, indice的存储, texture的存储.  
+解析过程涉及到对上图scene结构的理解.  
+
+
+# 深度测试笔记
+## 如何启用深度测试?
+glEnable(GL_DEPTH_TEST);  
+## 在渲染循环过程中要注意清除深度缓存  
+glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);  
+## 如何禁用深度缓存的更新?  
+glDepthMask(GL_FALSE);  
+## 如何指定深度测试通过行为?  
+glDepthFunc(GL_LESS);// GL_ALWAYS GL_NEVER GL_LESS GL_EQUAL GL_LEQUAL GL_GREATER GL_NOTEQUAL GL_GEQUAL  
+
+
+# framebuffer  
+
+
+# 高级GLSL  
+## 内建变量  
+gl_Position(out): 顶点着色器输出  
+gl_PointSize(out): 如果以点的方式绘制, 该变量决定了点的大小, 在粒子系统中存在应用.  
+gl_VertexID(in): 
+
+gl_FragCoord(in): (x,y,z),其中x,y是屏幕空间坐标,z是深度值  
+gl_FrontFacing(in): 该frag位置正面还是反面 bool类型  
+gl_FragDepth(out): 修改该frag的深度值(会导致禁用提前深度测试)
+
+## uniform缓冲  
+类似于纹理的绑定, 把shader中多个uniform绑定在同一个绑定点上面, 然后将该绑定点与缓冲对象绑定, 这样只需要修改一次缓冲对象就可以将修改应用到多个uniform变量.  
+
+# 几何着色器  
+顶点着色器->几何着色器->片段着色器  
+

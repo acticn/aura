@@ -192,6 +192,7 @@
     <None Include="LOshaders\10.shadow_mapping.fs" />
     <None Include="LOshaders\10.shadow_mapping.vs" />
     <None Include="LOshaders\10.shadow_mapping_depth.fs" />
+    <None Include="LOshaders\10.shadow_mapping_depth.gs" />
     <None Include="LOshaders\10.shadow_mapping_depth.vs" />
     <None Include="LOshaders\11.1.anti_aliasing.fs" />
     <None Include="LOshaders\11.1.anti_aliasing.vs" />
@@ -270,10 +271,12 @@
     <None Include="LOshaders\3.2.1.point_shadows.fs" />
     <None Include="LOshaders\3.2.1.point_shadows.vs" />
     <None Include="LOshaders\3.2.1.point_shadows_depth.fs" />
+    <None Include="LOshaders\3.2.1.point_shadows_depth.gs" />
     <None Include="LOshaders\3.2.1.point_shadows_depth.vs" />
     <None Include="LOshaders\3.2.2.point_shadows.fs" />
     <None Include="LOshaders\3.2.2.point_shadows.vs" />
     <None Include="LOshaders\3.2.2.point_shadows_depth.fs" />
+    <None Include="LOshaders\3.2.2.point_shadows_depth.gs" />
     <None Include="LOshaders\3.2.2.point_shadows_depth.vs" />
     <None Include="LOshaders\3.2.blending.fs" />
     <None Include="LOshaders\3.2.blending.vs" />
@@ -413,12 +416,15 @@
     <None Include="LOshaders\8.red.fs" />
     <None Include="LOshaders\8.yellow.fs" />
     <None Include="LOshaders\9.1.geometry_shader.fs" />
+    <None Include="LOshaders\9.1.geometry_shader.gs" />
     <None Include="LOshaders\9.1.geometry_shader.vs" />
     <None Include="LOshaders\9.2.geometry_shader.fs" />
+    <None Include="LOshaders\9.2.geometry_shader.gs" />
     <None Include="LOshaders\9.2.geometry_shader.vs" />
     <None Include="LOshaders\9.3.default.fs" />
     <None Include="LOshaders\9.3.default.vs" />
     <None Include="LOshaders\9.3.normal_visualization.fs" />
+    <None Include="LOshaders\9.3.normal_visualization.gs" />
     <None Include="LOshaders\9.3.normal_visualization.vs" />
     <None Include="LOshaders\9.ssao.fs" />
     <None Include="LOshaders\9.ssao.vs" />
