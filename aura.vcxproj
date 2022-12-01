@@ -458,6 +458,8 @@
     <None Include="LOshaders\text_2d.vs" />
     <None Include="LOshaders\transparent.fs" />
     <None Include="LOshaders\transparent.vs" />
+    <None Include="myShader.fs" />
+    <None Include="myShader.vs" />
     <None Include="src\shaders\3.3.shader.fs" />
     <None Include="src\shaders\3.3.shader.vs" />
   </ItemGroup>

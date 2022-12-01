@@ -964,5 +964,11 @@
     <None Include="LOshaders\10.shadow_mapping_depth.gs">
       <Filter>源文件\LOshaders</Filter>
     </None>
+    <None Include="myShader.fs">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="myShader.vs">
+      <Filter>源文件</Filter>
+    </None>
   </ItemGroup>
 </Project>
