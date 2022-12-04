@@ -28,6 +28,9 @@
     <Filter Include="源文件\LOshaders">
       <UniqueIdentifier>{e0b5a61e-eb34-4012-a4cb-f2e79d066d97}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\shaders">
+      <UniqueIdentifier>{a19cefb6-ccfe-4450-88eb-5633a011133f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="aura.cpp">
@@ -67,12 +70,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="src\shaders\3.3.shader.fs">
-      <Filter>源文件\src\shaders</Filter>
-    </None>
-    <None Include="src\shaders\3.3.shader.vs">
-      <Filter>源文件\src\shaders</Filter>
-    </None>
     <None Include="LOshaders\1.1.depth_testing.fs">
       <Filter>源文件\LOshaders</Filter>
     </None>
@@ -964,11 +961,17 @@
     <None Include="LOshaders\10.shadow_mapping_depth.gs">
       <Filter>源文件\LOshaders</Filter>
     </None>
-    <None Include="myShader.fs">
-      <Filter>源文件</Filter>
+    <None Include="shaders\3.3.shader.fs">
+      <Filter>源文件\shaders</Filter>
     </None>
-    <None Include="myShader.vs">
-      <Filter>源文件</Filter>
+    <None Include="shaders\3.3.shader.vs">
+      <Filter>源文件\shaders</Filter>
+    </None>
+    <None Include="shaders\shadowmap.fs">
+      <Filter>源文件\src\shaders</Filter>
+    </None>
+    <None Include="shaders\shadowmap.vs">
+      <Filter>源文件\src\shaders</Filter>
     </None>
   </ItemGroup>
 </Project>

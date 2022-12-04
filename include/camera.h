@@ -67,7 +67,7 @@ public:
     * center:相机视线上的任意一点
     * up:归一化的向上方向向量
     */
-    glm::mat4 GetViewMatrix()
+    glm::mat4 GetViewMatrix() const
     {
         return glm::lookAt(Position, Position + Front, Up);
     }

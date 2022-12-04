@@ -79,7 +79,8 @@ public:
             // 绑定纹理
             glBindTexture(GL_TEXTURE_2D, textures[i].id);
         }
-
+        
+        //std::cout << diffuseNr << " " << specularNr << " " << normalNr << " " << heightNr << std::endl;
         // 绑定VAO并执行绘图
         glBindVertexArray(VAO);
         glDrawElements(GL_TRIANGLES, static_cast<unsigned int>(indices.size()), GL_UNSIGNED_INT, 0);
